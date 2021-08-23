@@ -22,7 +22,7 @@ public class SolunaMain {
 
 		while (!(aiPlayer == 0 || aiPlayer == 1)) {
 			System.out.print("Which player is AI? (0 or 1): ");
-			aiPlayer = in.nextInt();
+			aiPlayer = Integer.parseInt(in.nextLine());
 		}
 
 		// Initial state
@@ -33,7 +33,7 @@ public class SolunaMain {
 			char symbol = '?';
 
 			while (!(symbol == 's' || symbol == 'c' || symbol == 'm' || symbol == 'h')) {
-				System.out.println("Symbol " + i + ": ");
+				System.out.print("Symbol " + i + ": ");
 				symbol = in.nextLine().charAt(0);
 			}
 
