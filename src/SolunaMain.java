@@ -46,7 +46,8 @@ public class SolunaMain {
 		while (state.getWinningPlayers().isEmpty()) {
 			// AI turn
 			if (state.getCurrentPlayer() == aiPlayer) {
-				state = (SolunaState) MCTS.search(state, 30, 1);
+				System.out.println("AI is thinking...");
+				state = (SolunaState) MCTS.search(state, 10, 1);
 			}
 			// Player turn
 			else {
@@ -54,7 +55,7 @@ public class SolunaMain {
 				String move = "";
 
 				while (!(state.isMoveValid(move))) {
-					System.out.println("Enter move: ");
+					System.out.print("Enter move: ");
 					move = in.nextLine();
 				}
 
